@@ -53,3 +53,24 @@ function begin(){
       taskBtn.classList.add("button");
       taskBtn.classList.add("second");
       form.appendChild(taskBtn);
+
+      /*Versión 0.0.4:Poner focus al input al dar click en "Agregar nueva tarea". Al dar click en el botón de "Añadir", deberá aparecer el texto de la tarea debajo del título de la lista, y Versión 0.0.5:Mostrar el formulario nuevamente debajo de la última tarea añadida.*/
+      task.focus();
+
+      taskBtn.addEventListener("click", newHomework);
+
+      function newHomework (event){
+        event.preventDefault();
+        if(task.value){
+          var titleTask = document.createElement("div");
+          titleTask.textContent = task.value;
+          titleTask.classList.add("bt-1");
+          container.appendChild(titleTask);
+          container.appendChild(form);
+          task.value = "";
+          task.focus();
+        }
+      }
+    }
+  }
+}
