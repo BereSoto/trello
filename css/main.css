@@ -105,6 +105,7 @@ main {
 	width: 270px;
 }
 
+/*Estilos de Botones*/
 .button {
   margin-top: 7px;
   background-color: #5EB64B;
@@ -128,6 +129,7 @@ main {
 	display: none;
 }
 
+/*Estilos de Input de formulario*/
 .form input{
   box-shadow: rgba(0,0,0,.15) 0px 1px 8px inset;
   background: rgba(0,0,0,.05);
