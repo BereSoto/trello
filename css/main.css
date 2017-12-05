@@ -1,3 +1,4 @@
+/*Setear*/
 * {
   box-sizing: border-box;
   margin: 0;
@@ -5,13 +6,13 @@
 }
 
 body {
-	background: #3A8EBE;
+	background: #00c0e8;
 	font-family: 'Open Sans', sans-serif;
 }
 
 /*Estilos del header*/
 header {
-	background:#317099;
+	background: #0090d0;
   box-shadow: 0 1px 1px rgba(0,0,0,.1);
   padding: 5px 8px;
 	position: fixed;
@@ -20,6 +21,7 @@ header {
   z-index: 10;
 
 }
+
 .logo {
 	padding-top: 4px;
   opacity: 0.5;
@@ -32,3 +34,140 @@ header {
 .logo:hover {
 	opacity: 1;
 }
+input{
+height: 42px;
+width: 200px;
+
+
+}
+.buscador{
+  float: left;
+  width: 10px;
+  height: 10px;
+  margin-top: -42px;
+  margin-left: 230px;
+  opacity: .5;
+
+}
+.content-box-blue {
+float: left;
+background-color: white;
+border: 1px solid #afcde3;
+height: 42px;
+width: 200px;
+margin-top: -42px;
+margin-left: 10px;
+opacity: .5;
+
+}
+
+/*estilo h2*/
+
+h3{
+  color: white;
+}
+
+
+/*Estilos al main*/
+main {
+  padding: 57px 8px 10px;
+}
+
+/*Estilos a seccion correpondiente al formulario*/
+.add-list {
+  background: #E2E4E6;
+	height: 100%;
+  margin: 10px  5px;
+  width: 270px;
+	vertical-align: top;
+  display: inline-block;
+  border-radius: 5px;
+}
+
+.list {
+  padding: 10px 14px;
+  background-color: #0067A3;
+  width: 100%;
+  text-align: left;
+}
+
+.list:hover{
+	background-color:#005485;
+}
+
+.form {
+	background-color: #E2E4E6;
+  display: inline-block;
+	padding: 6px;
+	border-radius: 5px;
+	vertical-align: top;
+  margin-right: 21px;
+	width: 270px;
+}
+
+.button {
+  margin-top: 7px;
+  background-color: #5EB64B;
+  padding: 6px 20px;
+  border-radius: 2px;
+  font-weight: bold;
+}
+
+.button:hover {
+	background-color: #549F3D;
+}
+
+.list, .button {
+	border: none;
+	color: white;
+	font-size: 1em;
+	border-radius: 5px;
+}
+
+.none{
+	display: none;
+}
+
+.form input{
+  box-shadow: rgba(0,0,0,.15) 0px 1px 8px inset;
+  background: rgba(0,0,0,.05);
+  padding: 10px 10px;
+  border-radius: 5px;
+  border: 1px solid #aaa;
+  font-size: 1em;
+  display: block;
+  width: 240px;
+}
+
+.linkTask{
+  margin: 10px 10px;
+}
+
+.newtask {
+  display: block;
+  margin: 0 auto;
+  width: 250px;
+  resize: none;
+  height: 40px;
+  border-radius: 5px;
+  border: none;
+}
+
+.bt {
+  padding: 8px 12px;
+  font-weight: 700;
+}
+
+.bt-1 {
+  padding: 8px 12px;
+  font-weight: 700;
+  margin: 20px 10px;
+  background: #FFFFFF;
+  margin: 8px;
+  border-radius: 5px;
+  font-weight: 500;
+  }
+
+  .second {
+    margin-left: 8px;
+  }
