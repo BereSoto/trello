@@ -1,38 +1,41 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <meta charset="utf-8">
-        <title>Trello</title>
-        <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,600,700,800" rel="stylesheet">
-        <link rel="stylesheet" type="text/css" href="css/main.css">
-
-    </head>
-    <body>
-			<header>
-				<div class="container">
-					<figure>
-						<img class="logo" src="assets/images/trello-logo.png" alt="logo" height="40">
-					</figure>
-					<div class="content-box-blue">Tableros.
-          <img class="logo-2" src="assets/images/logo_pestaña.png" alt="logo" height="40">
-				</div>
-			</div>
-			<div class="buscador">
-				<input type="busqueda" name="" value="" >
+  <head>
+    <meta charset="utf-8">
+    <title>Trello</title>
+    <link rel="icon" type="img/png" href="assets/images/trello_pestaña.png">
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,600,700,900" rel="stylesheet">
+    <link rel="stylesheet" href="css/main.css">
+  </head>
+  <body>
+    <header>
+      <img src="assets/images/trello-logo-white.png" alt="Logo">
+      <div class="table">
+        <i class="fa fa-trello" aria-hidden="true"></i> Tableros
       </div>
-		</header>
-		<main>
-			<h3>Tablero - reto codigo</h3>
-			<div class="container">
-				<div class="add-list" id="content-list">
-					<div class="list" id="addList">Añadir una lista...</div>
-					<form class="form none" id="form">
-						<input type="text" id="list" placeholder="Añadir una lista...">
-						<button  id="btn" class="button">Guardar</button>
-					</form>
-				</div>
-			</div>
-		</main>
-		<script type="text/javascript" src="js/app.js"></script>
-	</body>
+      <div class="searcher">
+        <i class="fa fa-search" aria-hidden="true"></i>
+      </div>
+      <div class="user"><i class="fa fa-user-circle" aria-hidden="true"></i></div>
+      <div class="bell"><i class="fa fa-bell-o" aria-hidden="true"></i></div>
+      <div class="info-circle"><i class="fa fa-info-circle" aria-hidden="true"></i></div>
+      <div class="plus"><i class="fa fa-plus" aria-hidden="true"></i></div>
+    </header>
+    <main>
+        <h3>Tablero - reto codigo <button type="button" name="favorite"><i class="fa fa-star-o" aria-hidden="true"></i></button> <button type="button" name="private"><i class="fa fa-lock" aria-hidden="true"></i>Privado</button></h3>
+
+        <div class="container">
+          <div class="add-list" id="content-list">
+            <div class="list" id="addList">Añadir una lista...</div>
+            <form class="form none" id="form">
+              <input type="text" id="list" placeholder="Añadir una lista...">
+              <button id="btn" class="button">Guardar</button>
+            </form>
+            </div>
+          </div>
+    </main>
+
+        <script type="text/javascript" src="js/app.js"></script>
+    </body>
 </html>

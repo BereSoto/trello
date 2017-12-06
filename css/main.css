@@ -1,79 +1,159 @@
-/*Setear*/
 * {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
+ font-family: 'Source Sans Pro', sans-serif;
 }
 
 body {
-	background: #00c0e8;
-	font-family: 'Open Sans', sans-serif;
+ margin: 0;
+ padding: 0;
+ background: rgb(0, 121, 191);
 }
 
-/*Estilos del header*/
 header {
-	background: #0090d0;
-  box-shadow: 0 1px 1px rgba(0,0,0,.1);
-  padding: 5px 8px;
-	position: fixed;
-  text-align: center;
-  width: 100%;
-  z-index: 10;
-
+ position: fixed;
+ width: 100%;
+ height: 8%;
+ top: 0;
+ background: rgb(0, 103, 162);
 }
 
-.logo {
-	padding-top: 4px;
-  opacity: 0.5;
-}
-.logo-2{
-  float: left;
-  opacity: 0.5;
-
-}
-.logo:hover {
-	opacity: 1;
-}
-input{
-height: 42px;
-width: 200px;
-
-
-}
-.buscador{
-  float: left;
-  width: 10px;
-  height: 10px;
-  margin-top: -42px;
-  margin-left: 230px;
-  opacity: .5;
-
-}
-.content-box-blue {
-float: left;
-background-color: white;
-border: 1px solid #afcde3;
-height: 42px;
-width: 200px;
-margin-top: -42px;
-margin-left: 10px;
-opacity: .5;
-
+header > img {
+ display: inline-block;
+ margin-left: 30%;
+ margin-top: .8%;
+ width: 6%;
+ height: 45%;
+ opacity: .6;
 }
 
-/*estilo h2*/
-
-h3{
-  color: white;
+img:hover {
+ cursor: pointer;
+ opacity: none;
 }
 
+header > .table {
+ float: left;
+ margin-left: .5%;
+ margin-top: .5%;
+ width: 6%;
+ padding: .5%;
+ border-radius: 5%;
+ background-color: rgb(255, 255, 255);
+ opacity: .4;
+}
+
+.table:hover {
+ color: rgb(255, 255, 255);
+ cursor: pointer;
+}
+
+header > .searcher {
+ display: inline;
+ float: left;
+ margin-left: .5%;
+ margin-top: .5%;
+ width: 15%;
+ padding: .5%;
+ border-radius: 5%;
+ background-color: rgb(255, 255, 255);
+ opacity: .4;
+}
+
+.searcher:hover {
+ color: rgb(255, 255, 255);
+ cursor: pointer;
+}
+
+
+header > .user {
+  float: right;
+  margin-right: .5%;
+  margin-top: .65%;
+  padding: .5%;
+  border-radius: 100%;
+  background-color: rgb(255, 255, 255);
+  opacity: .4;
+}
+
+.user:hover {
+  cursor: pointer;
+}
+
+header > .bell {
+  display: inline;
+  float: right;
+  margin-right: .5%;
+  margin-top: .65%;
+  padding: .5%;
+  border-radius: 5%;
+  background-color: rgb(255, 255, 255);
+  opacity: .4;
+}
+
+.bell:hover {
+  cursor: pointer;
+}
+
+header > .info-circle {
+  display: inline;
+  float: right;
+  margin-right: .5%;
+  margin-top: .65%;
+  padding: .5%;
+  border-radius: 5%;
+  background-color: rgb(255, 255, 255);
+  opacity: .4;
+}
+
+.info-circle:hover {
+  cursor: pointer;
+}
+
+header > .plus {
+  display: inline;
+  float: right;
+  margin-right: .5%;
+  margin-top: .65%;
+  padding: .5%;
+  border-radius: 5%;
+  background-color: rgb(255, 255, 255);
+  opacity: .4;
+}
+
+.plus:hover {
+  cursor: pointer;
+}
+
+h3 {
+  margin-left: .5%;
+  margin-top: .5%;
+  font-size: 115%;
+  color: rgb(255, 255, 255);
+}
+
+button {
+  border-bottom: none;
+  background: none;
+  border-style: none;
+}
+
+.fa-star-o:hover {
+  cursor: pointer;
+  color: rgb(255, 255, 255);
+}
+
+.fa-lock {
+    cursor: pointer;
+    color: rgb(255, 255, 255);
+}
 
 /*Estilos al main*/
+
 main {
   padding: 57px 8px 10px;
 }
 
 /*Estilos a seccion correpondiente al formulario*/
+
 .add-list {
   background: #E2E4E6;
 	height: 100%;
@@ -171,4 +251,3 @@ main {
   .second {
     margin-left: 8px;
   }
-/* enviado a rama*/
