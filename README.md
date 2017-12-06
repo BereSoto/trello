@@ -27,4 +27,4 @@ Flujo de trabajo.
 
  - Mostrar el formulario nuevamente debajo de la última tarea añadida.
 
-[!Diagrama de flujo](assets/images/diagrama.jpeg)
+![Diagrama de flujo]()
