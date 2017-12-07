@@ -1,9 +1,7 @@
 /*Declaracion de variables*/
-
 var addListConteiner = document.getElementById("addlist-Conteiner");
 var listConteiner = document.getElementById("list-Conteiner");
 var mainList = document.getElementById("main-list");
-
 
 /*Evento para agregar Lista*/
 
