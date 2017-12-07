@@ -1,55 +1,116 @@
-window.addEventListener("load", begin);
+/*Declaracion de variables*/
 
-var container = document.getElementById("content-list")
-var list = document.getElementById("addList");
-var boxForm = document.getElementById("form");
-var text = document.getElementById("list");
-var boton = document.getElementById("btn");
+var addListConteiner = document.getElementById("addlist-Conteiner");
+var listConteiner = document.getElementById("list-Conteiner");
+var mainList = document.getElementById("main-list");
 
-function begin(){
-  /*Versión 0.0.1:Se mostrará el texto "Añadir una lista ...". Al hacer click se debe ocultar el texto y mostrar un formulario. El formulario está conformado por un input y un botón para que pueda añadir tareas a tu lista.*/
-  list.addEventListener("click", anexarLista);
-  function anexarLista() {
-    list.classList.toggle("none");
-    boxForm.classList.toggle("none");
-    text.focus();
+
+/*Evento para agregar Lista*/
+
+mainList.addEventListener("click", listOpen);
+function listOpen(event) {
+  document.getElementById("main-list").style.display = "none";
+
+  var formOfList = document.createElement("div");
+  formOfList.setAttribute("id","formbox");
+  formOfList.classList.add("form");
+  addListConteiner.appendChild(formOfList);
+
+  var listNew = document.createElement("input");
+  listNew.setAttribute("placeholder", "Añadir una lista...");
+  listNew.setAttribute("id","listNew");
+
+/*Guardar lista (Boton de Guardar)*/
+  var saveBtn = document.createElement("button");
+  saveBtn.classList.add("saveBtn");
+  saveBtn.setAttribute("id","saveBtn");
+
+/*Cerrar lista  (Boton Cerra lista)*/
+  var closeBtn = document.createElement("i");
+  closeBtn.setAttribute("class", "fa fa-times");
+  closeBtn.addEventListener("click", closeListBtn);
+
+/*Evento para cuando se cierra*/
+  function closeListBtn(event) {
+    addListConteiner.removeChild(formOfList);
+    addListConteiner.appendChild(mainList);
+    document.getElementById("main-list").style.display = "inline-block"; //aparece la ventana
   }
 
-  /*Versión 0.0.2:Al dar click en el botón de "Guardar", se mostrará un nuevo cuadro donde estará el nombre de la lista agregada. Mostrar un texto de "Añadir una tarea" dentro de la lista.*/
-  boton.addEventListener("click", saveEvent);
-  function saveEvent(event){
-    event.preventDefault();
-    if(text.value){
-      boxForm.classList.toggle("none");
-      var title = text.value;
-      var boxTitle = document.createElement("div");
-      boxTitle.textContent = title;
-      boxTitle.classList.add("bt");
-      container.appendChild(boxTitle);
+  formOfList.appendChild(listNew);
+  formOfList.appendChild(saveBtn);
+  formOfList.appendChild(closeBtn);
+  saveBtn.textContent = "Guardar";
+  listNew.focus();
+  saveBtn.addEventListener("click", save);
 
-      var linkTask = document.createElement("input");
-      linkTask.setAttribute("placeholder", "Añadir una tarea...");
-      linkTask.classList.add("linkTask");
-      container.appendChild(linkTask);
+  /*Versión 0.0.2  --- Guardar y añadir---*/
+
+  function save(event) {
+    var title = listNew.value;
+    var lista = document.createElement("div");
+    var text = document.createElement("div");
+    var task = document.createElement("div");
+
+    lista.classList.add("lista");
+    task.classList.add("task");
+    text.classList.add("title");
+    text.innerText = title;
+    task.innerHTML = "Añadir una tarea...";
+    lista.appendChild(text);
+    lista.appendChild(task);
+    listConteiner.appendChild(lista);
+    listNew.value= "";
+    listConteiner.appendChild(lista);
+    task.addEventListener("click", listaTask);
+
+    /*Versión 0.0.3  "Añadir una tarea"*/
+
+    function listaTask(event) {
+      var taskForm = document.createElement("div");
+      taskForm.classList.add("taskForm");
+
+      var taskName = document.createElement("textarea");
+      taskName.classList.add("taskName");
+
+      var taskSave = document.createElement("button");
+      taskSave.classList.add("taskSave");
+      taskSave.textContent = "Añadir";
+
+      var taskClose = document.createElement("i");
+      taskClose.setAttribute("class", "fa fa-times");
+      taskClose.setAttribute("aria-hidden", "true");
+      taskClose.addEventListener("click", close);
+
+
+      function close(event) {
+        lista.removeChild(taskForm);
+        lista.appendChild(task);
+      }
+
+      taskForm.appendChild(taskName);
+      taskForm.appendChild(taskSave);
+      taskForm.appendChild(taskClose);
+
+      lista.appendChild(taskForm);
+      lista.removeChild(task);
+
+/*Versión 0.0.4. (Agregar nueva tarea)*/
+
+      taskName.focus();
+      taskSave.addEventListener("click", listSave);
+
+      function listSave(event) {
+        var titleTask = taskName.value;
+        var addTask = document.createElement("div");
+        addTask.classList.add("task");
+        addTask.innerHTML = titleTask;
+
+        lista.appendChild(addTask);
+        lista.insertBefore(addTask,taskForm);
+        taskName.value = "";
+        taskName.focus();
+      }
     }
-
-    /*Versión 0.0.3:Al dar click en "Añadir una tarea", deberá mostrar un formulario con un textarea y un botón que diga "Añadir".*/
-      linkTask.addEventListener("click", addTareas);
-      function addTareas(event){
-      linkTask.classList.toggle("none");
-
-      var form = document.createElement("form");
-      container.appendChild(form);
-
-      var task = document.createElement("textarea");
-      task.classList.add("newtask");
-      form.appendChild(task);
-
-      var taskBtn = document.createElement("button");
-      taskBtn.setAttribute("id", "btn");
-      taskBtn.textContent = "Añadir";
-
-
-      taskBtn.classList.add("button");
-      taskBtn.classList.add("second");
-      form.appendChild(taskBtn);
+  }
+}
