@@ -1,3 +1,5 @@
+/*Estilos de Barra menu y segunda seccion*/
+
 * {
  font-family: 'Source Sans Pro', sans-serif;
 }
@@ -7,6 +9,7 @@ body {
  padding: 0;
  background: rgb(0, 121, 191);
 }
+
 
 header {
  position: fixed;
@@ -146,108 +149,133 @@ button {
     color: rgb(255, 255, 255);
 }
 
-/*Estilos al main*/
 
+
+/*Estilos al main (Contenido principal)*/
 main {
   padding: 57px 8px 10px;
 }
 
 /*Estilos a seccion correpondiente al formulario*/
-
-.add-list {
-  background: #E2E4E6;
-	height: 100%;
-  margin: 10px  5px;
-  width: 270px;
-	vertical-align: top;
-  display: inline-block;
-  border-radius: 5px;
+.form{
+    display: inline-block;
+    background: #fff;
+    width: 280px;
+    height: 110px;
+    background-color: #e2e4e6;
+    border-radius: 3px;
+    margin: 10px;
 }
 
-.list {
-  padding: 10px 14px;
-  background-color: #0067A3;
-  width: 100%;
-  text-align: left;
-}
-
-.list:hover{
-	background-color:#005485;
-}
-
-.form {
-	background-color: #E2E4E6;
-  display: inline-block;
-	padding: 6px;
-	border-radius: 5px;
-	vertical-align: top;
-  margin-right: 21px;
-	width: 270px;
-}
-
-.button {
-  margin-top: 7px;
-  background-color: #5EB64B;
-  padding: 6px 20px;
-  border-radius: 2px;
-  font-weight: bold;
-}
-
-.button:hover {
-	background-color: #549F3D;
-}
-
-.list, .button {
-	border: none;
-	color: white;
-	font-size: 1em;
-	border-radius: 5px;
-}
-
-.none{
-	display: none;
-}
-
+/*Estilo al boton Input del  formulario*/
 .form input{
-  box-shadow: rgba(0,0,0,.15) 0px 1px 8px inset;
-  background: rgba(0,0,0,.05);
-  padding: 10px 10px;
-  border-radius: 5px;
-  border: 1px solid #aaa;
-  font-size: 1em;
-  display: block;
-  width: 240px;
+    box-shadow: rgba(0,0,0,.15) 0px 1px 8px inset;
+    background: rgba(0,0,0,.05);
+    margin: 10px  10px ;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #aaa;
+    font-size: 1em;
+    display: block;
+    width: 240px;
 }
 
-.linkTask{
-  margin: 10px 10px;
+#main-list {
+    width: 270px;
+    height: 20px;
+    margin: 10px;
+    border-radius: 3px;
+    background-color: #006aa7;
+    color: #9dc7df;
+    padding: 10px;
+    font-size: 14px;
+    //float: right;
 }
 
-.newtask {
-  display: block;
-  margin: 0 auto;
-  width: 250px;
-  resize: none;
-  height: 40px;
-  border-radius: 5px;
-  border: none;
+#main-list:hover {
+    background-color: rgba(25, 27, 25, 0.5);
 }
 
-.bt {
-  padding: 8px 12px;
-  font-weight: 700;
+.lista {
+    width: 290px;
+    background-color: #e2e4e6;
+    border-radius: 3px;
+    margin: 10px;
+    margin-right: 0px;
+    float: left;
 }
 
-.bt-1 {
-  padding: 8px 12px;
-  font-weight: 700;
-  margin: 20px 10px;
-  background: #FFFFFF;
-  margin: 8px;
-  border-radius: 5px;
-  font-weight: 500;
-  }
+.taskName {
+    width: 260px;
+    height: 30px;
+    border-radius: 3px;
+    border: 1px solid #959595;
+    margin: 5px;
+    padding: 10px;
+    box-shadow: inset 0 1px 8px rgba(0, 0, 0, .15);
+    float: left;
+}
 
-  .second {
-    margin-left: 8px;
-  }
+.saveBtn {
+    width: 82px;
+    height: 32px;
+    background-color: #5aac44;
+    margin: 5px 10px;
+    border-radius: 3px;
+    border-style: none;
+    color: white;
+    font-weight: 700;
+    font-size: 14px;
+}
+
+.saveBtn:hover {
+    background: #4d9439;
+}
+
+.title {
+    font-weight: 700;
+    font-size: 14px;
+    margin: 9px;
+}
+
+.task{
+    background-color: #d8dcdd;
+    width: 250px;
+    height: 25px;
+    border-bottom: 1px solid #ccc;
+    border-radius: 3px;
+    padding: 10px;
+    margin: 5px 5px;
+    margin-bottom: 1px;
+    font-size: 14px;
+    color: #4d4d4d;
+}
+
+.task:hover {
+    background-color: #d8dcde;
+    width: 250px;
+    text-decoration: underline #727487;
+    color: #2c2f2f;
+}
+
+
+
+.taskForm {
+    width: 200px;
+}
+
+.taskSave {
+    width: 76px;
+    height: 30px;
+    background-color: #5aac44;
+    margin: 0 3px 7px 7px;
+    border-radius: 3px;
+    border-style: none;
+    color: white;
+    font-weight: 700;
+    font-size: 14px;
+}
+
+.taskSave:hover {
+    background: #4d9439;
+}

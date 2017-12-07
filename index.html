@@ -4,9 +4,9 @@
     <meta charset="utf-8">
     <title>Trello</title>
     <link rel="icon" type="img/png" href="assets/images/trello_pestaña.png">
-    <link rel="stylesheet" href="css/main.css">
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet"/>
     <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,600,700,900" rel="stylesheet">
-    <link rel="stylesheet" href="css/font-awesome/css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/main.css">
   </head>
   <body>
     <header>
@@ -22,20 +22,19 @@
       <div class="info-circle"><i class="fa fa-info-circle" aria-hidden="true"></i></div>
       <div class="plus"><i class="fa fa-plus" aria-hidden="true"></i></div>
     </header>
-    <main>
-        <h3>Tablero - reto codigo <button type="button" name="favorite"><i class="fa fa-star-o" aria-hidden="true"></i></button> <button type="button" name="private"><i class="fa fa-lock" aria-hidden="true"></i>Privado</button></h3>
-
-        <div class="container">
-          <div class="add-list" id="content-list">
-            <div class="list" id="addList">Añadir una lista...</div>
-            <form class="form none" id="form">
-              <input type="text" id="list" placeholder="Añadir una lista...">
-              <button id="btn" class="button">Guardar</button>
-            </form>
+        <main>
+          <h3>Tablero - Reto de Código</h3>
+          <div id="main-container">
+            <div id="list-Conteiner"></div>
+            <div id="addlist-Conteiner">
+              <div id="main-list">Añadir una lista</div>
+              <form>
+              <!--<input id="title" placeholder="Añadir una lista...">
+              <button id="saveBtn">Guardar</button>-->
+              </form>
             </div>
           </div>
-    </main>
-
+        </main>
         <script type="text/javascript" src="js/app.js"></script>
     </body>
 </html>
