@@ -75,7 +75,7 @@ function listOpen(event) {
       taskSave.classList.add("taskSave");
       taskSave.textContent = "Añadir";
 
-<<<<<<< HEAD
+
       var taskClose = document.createElement("i");
       taskClose.setAttribute("class", "fa fa-times");
       taskClose.setAttribute("aria-hidden", "true");
@@ -109,7 +109,8 @@ function listOpen(event) {
         lista.insertBefore(addTask,taskForm);
         taskName.value = "";
         taskName.focus();
-=======
+
+
       taskBtn.classList.add("button");
       taskBtn.classList.add("second");
       form.appendChild(taskBtn);
@@ -130,7 +131,6 @@ function listOpen(event) {
           task.value = "";
           task.focus();
         }
->>>>>>> 96b4eaf9c8f5a352fd5b68e241c3f9e99f040c42
       }
     }
   }
